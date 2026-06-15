@@ -1,70 +1,70 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     background: #0f172a;
     color: white;
     line-height: 1.6;
 }
 
-.hero{
+.hero {
     min-height: 100vh;
-    background: linear-gradient(135deg,#0f172a,#1e293b,#312e81);
+    background: linear-gradient(135deg, #0f172a, #1e293b, #312e81);
     padding: 30px 10%;
 }
 
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo{
+.logo {
     font-size: 30px;
     color: #38bdf8;
 }
 
-nav ul{
+nav ul {
     display: flex;
     gap: 20px;
     list-style: none;
 }
 
-nav ul li a{
+nav ul li a {
     color: white;
     text-decoration: none;
     transition: 0.3s;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     color: #38bdf8;
 }
 
-.hero-content{
+.hero-content {
     margin-top: 180px;
     max-width: 600px;
 }
 
-.hero-content h1{
+.hero-content h1 {
     font-size: 60px;
     margin-bottom: 20px;
 }
 
-.hero-content p{
+.hero-content p {
     font-size: 20px;
     margin-bottom: 30px;
     color: #cbd5e1;
 }
 
-.btn{
+.btn {
     display: inline-block;
     padding: 12px 25px;
     background: #38bdf8;
@@ -75,47 +75,82 @@ nav ul li a:hover{
     transition: 0.3s;
 }
 
-.btn:hover{
+.btn:hover {
     transform: scale(1.05);
 }
 
-.section{
+.section {
     padding: 80px 10%;
 }
 
-.section h2{
+.section h2 {
     font-size: 40px;
     margin-bottom: 30px;
     color: #38bdf8;
 }
 
-.skills-container{
+.skills-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.skill-card img{
+.skill-card {
+    background: #1e293b;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.skill-card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: white;
+}
+
+.skill-card img {
     width: 100%;
-    height: 250px;
+    height: 150px;
     object-fit: contain;
     background: white;
     border-radius: 10px;
-    margin-bottom: 15px;
     padding: 10px;
 }
 
-.skill-card:hover{
+.skill-card:hover {
     transform: translateY(-5px);
 }
 
-.project-container{
+.project-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
-.project-card img{
+.project-card {
+    background: #1e293b;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.project-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+.project-card p {
+    color: #cbd5e1;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.project-card img {
     width: 100%;
     height: 220px;
     object-fit: contain;
@@ -124,44 +159,81 @@ nav ul li a:hover{
     margin-bottom: 20px;
     padding: 10px;
 }
-.project-card:hover{
-    transform: translateY(5px);
+
+.project-card:hover {
+    transform: translateY(-5px);
 }
 
-.contact-container{
+.project-links {
     display: flex;
-    flex-direction: column;
     gap: 15px;
 }
 
-.contact-container a{
-    color: #38bdf8;
+.project-links a {
+    display: inline-block;
+    padding: 8px 18px;
+    background: #38bdf8;
+    color: black;
     text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
 }
 
-footer{
+.project-links a:hover {
+    transform: scale(1.05);
+    background: #7dd3fc;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 17px;
+}
+
+.contact-container a {
+    color: #38bdf8;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.contact-container a:hover {
+    text-decoration: underline;
+}
+
+footer {
     text-align: center;
     padding: 20px;
     background: #020617;
     color: #94a3b8;
 }
 
-@media(max-width:768px){
+@media (max-width: 768px) {
 
-    nav{
+    nav {
         flex-direction: column;
         gap: 20px;
     }
 
-    .hero-content{
+    .hero-content {
         margin-top: 120px;
     }
 
-    .hero-content h1{
+    .hero-content h1 {
         font-size: 40px;
     }
 
-    .hero-content p{
+    .hero-content p {
         font-size: 18px;
+    }
+
+    .skills-container {
+        justify-content: center;
+    }
+
+    .skill-card {
+        width: 160px;
     }
 }
